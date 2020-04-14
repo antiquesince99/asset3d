@@ -4,7 +4,6 @@ import { UserService } from '../user.service';
 import Swal from 'sweetalert2';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -17,7 +16,8 @@ export class RegisterComponent implements OnInit {
   message: string;
   selectedFile: any;
   
-  
+
+
   constructor(private fb: FormBuilder, private userservice: UserService) { }
 
   ngOnInit(): void {

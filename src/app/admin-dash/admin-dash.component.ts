@@ -18,4 +18,13 @@ export class AdminDashComponent implements OnInit {
     this.admin = JSON.parse(sessionStorage.getItem("user"))
   }
 
+  togglemanageuser(){
+    this.showmanageuser = true;
+    this.showmanageseller = false;
+  }
+
+  togglemanageseller(){
+    this.showmanageuser = false;
+    this.showmanageseller = true;
+  }
 }

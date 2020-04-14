@@ -15,5 +15,5 @@ export class sellerService {
   addseller(data){
     return this.http.post(this.url+'/add', data);
   }
-
+  
 }

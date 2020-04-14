@@ -1,45 +1,53 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
+            
             <form [formGroup]="userform" (submit)="userSubmit(userform.value)">
-                <mat-card class="mt-5" style="background-color: transparent;">
+                <mat-card class="mt-5" style="background-color: rgba(201, 131, 174, 0.247);">
                     <mat-card-header>
                         <p class="h4">Registration Panel</p>
                     </mat-card-header>
                     <hr>
                     <mat-card-content>
                         <mat-form-field appearance="outline" class="col-md">
-                         
                             <mat-label>Name</mat-label>
                             <input matInput placeholder="Mr. Anderson" formControlName="name">
+                            <mat-icon matSuffix>account_circle</mat-icon>
                             <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
                         </mat-form-field>
 
                         <mat-form-field appearance="outline" class="col-md">
                             <mat-label>Username</mat-label>
                             <input matInput placeholder="Mr. Anderson" formControlName="username">
+                            <mat-icon matSuffix>account_box</mat-icon>
+
                             <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
                         </mat-form-field>
 
                         <mat-form-field appearance="outline" class="col-md">
                             <mat-label>Email</mat-label>
                             <input matInput placeholder="Mr. Anderson" formControlName="email">
+                            <mat-icon matSuffix> email</mat-icon>
                             <mat-error *ngIf="getControl().email.errors">Email required</mat-error>
                         </mat-form-field>
     
                         <mat-form-field appearance="outline" class="col-md">
                             <mat-label>Password</mat-label>
                             <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
+                            <mat-icon matSuffix>https</mat-icon>
+
                             <mat-error *ngIf="getControl().password.errors">Password required</mat-error>
                         </mat-form-field>
 
                         <mat-form-field appearance="outline" class="col-md">
                             <mat-label>Confirm Password</mat-label>
                             <input matInput placeholder="Mr. Anderson" type="password" formControlName="confirm">
+                            <mat-icon matSuffix>verified_user</mat-icon>
+
                             <mat-error *ngIf="getControl().confirm.errors">Password not matched</mat-error>
                         </mat-form-field>
     
-                        <button mat-raised-button class="btn-block mt-5" color="primary">Submit Now</button>
+                        <button mat-raised-button class="btn-block mt-4" color="primary">Submit Now</button>
                     </mat-card-content>
                 </mat-card>
                 

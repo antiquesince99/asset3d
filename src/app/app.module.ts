@@ -24,6 +24,10 @@ import { ManagepasswordComponent } from './managepassword/managepassword.compone
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {MatIconModule} from '@angular/material/icon';
+import { ManageuserComponent } from './manageuser/manageuser.component';
+import { ManagesellerComponent } from './manageseller/manageseller.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +41,9 @@ import { HeaderComponent } from './header/header.component';
     ManagepasswordComponent,
     AdminDashComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ManageuserComponent,
+    ManagesellerComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,8 @@ import { HeaderComponent } from './header/header.component';
     ReactiveFormsModule, 
     FormsModule,
     HttpClientModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
