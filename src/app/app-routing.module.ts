@@ -11,6 +11,7 @@ import { ManagepasswordComponent } from './managepassword/managepassword.compone
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 
@@ -23,10 +24,10 @@ const routes: Routes = [
   { path: 'sellerregister', component: SellerregisterComponent},
   { path : 'home', component: HomeComponent},
   { path: 'forgetpassword', component: ManagepasswordComponent},
-  {path: 'AdminDashboard', component: AdminDashComponent},
-  {path: 'footer', component: FooterComponent},
-  {path: 'header', component: HeaderComponent}
-  
+  { path: 'AdminDashboard', component: AdminDashComponent},
+  { path: 'footer', component: FooterComponent},
+  { path: 'header', component: HeaderComponent},
+  { path: 'payment', component: PaymentComponent}
 ];
 
 @NgModule({

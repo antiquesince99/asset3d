@@ -10,7 +10,6 @@ export class AdminDashComponent implements OnInit {
   seller;
   showmanageuser = false;
   showmanageseller = false;
-  showmanagemodel = false;
 
   constructor() { }
 

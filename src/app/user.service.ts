@@ -13,14 +13,25 @@ export class UserService {
   addUser(data){
     return this.http.post(this.url+'/add', data);
   }
+
+  
   getByUsername(username){
     return this.http.get(this.url+`/getbyusername/${username}`);
   }
+
+
+  getallusers(){
+    return this.http.get(this.url+`/getall`);
+  }
+
+
   logout(){
     sessionStorage.reoveItem('user');
     sessionStorage.removeItem('admin');
     this.router.navigate(['/login']);
   }
+
+
 uploadImage(file)
 {
 return this.http.post(this.url+'/addimg',file)

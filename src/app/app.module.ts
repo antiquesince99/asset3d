@@ -27,6 +27,8 @@ import { HeaderComponent } from './header/header.component';
 import {MatIconModule} from '@angular/material/icon';
 import { ManageuserComponent } from './manageuser/manageuser.component';
 import { ManagesellerComponent } from './manageseller/manageseller.component';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { ManagesellerComponent } from './manageseller/manageseller.component';
     FooterComponent,
     HeaderComponent,
     ManageuserComponent,
-    ManagesellerComponent
+    ManagesellerComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { ManagesellerComponent } from './manageseller/manageseller.component';
     FormsModule,
     HttpClientModule,
     SweetAlert2Module,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
