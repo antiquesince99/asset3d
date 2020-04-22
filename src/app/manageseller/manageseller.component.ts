@@ -17,8 +17,6 @@ export class ManagesellerComponent implements OnInit {
 
       this.sellers = data;
       console.log(data);
-      
+     })
+   }
   }
-
-}
-}

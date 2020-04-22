@@ -4,11 +4,11 @@
             <tbody>
                 <tr>
                     <mat-accordion>
-                        <mat-expansion-panel *ngFor="let seller of sllers">
+                        <mat-expansion-panel *ngFor="let seller of sellers">
                             <mat-expansion-panel-header>
                             <mat-panel-title>
                               <!-- <img mat-card-avatar class="header" [src]="'http://localhost:3000/hostimages/'+host.avatar" style="padding: 5px;"> -->
-                                <p class="mx-auto">{{user.name}}</p>
+                                <p class="mx-auto">{{seller.name}}</p>
                             </mat-panel-title>
                             <mat-panel-description>
                                 Booked {{seller.city}}
@@ -16,9 +16,9 @@
                             
                             </mat-expansion-panel-header>
                             <p style="color: rgba(0, 0, 0, 0.678);">
-                              Name: {{seller.name}}          <br>
-                              Username: {{seller}.Username}    <br>               
-                              Email: {{seller.Email}} <br>       
+                              Name: {{seller.name}}      <br>
+                              Email: {{seller.Email}}    <br>               
+                              contact: {{seller.contact}} <br>       
                               </p> 
                              
                         </mat-expansion-panel>

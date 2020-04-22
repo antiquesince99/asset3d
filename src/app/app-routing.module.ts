@@ -19,7 +19,6 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: 'addmodel', component: AddmodelComponent},
-  { path: 'register', component: RegisterComponent},
   { path: 'browse', component: BrowseComponent},
   { path: 'sellerregister', component: SellerregisterComponent},
   { path : 'home', component: HomeComponent},

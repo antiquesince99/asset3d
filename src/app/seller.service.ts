@@ -16,4 +16,7 @@ export class sellerService {
     return this.http.post(this.url+'/add', data);
   }
   
+  getallseller(){
+    return this.http.get(this.url+`/getall`);
+  }
 }
