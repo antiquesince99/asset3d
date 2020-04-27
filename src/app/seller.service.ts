@@ -19,4 +19,10 @@ export class sellerService {
   getallseller(){
     return this.http.get(this.url+`/getall`);
   }
+
+  updateseller(id,data){
+    return this.http.put(this.url + '/update/'+id, data);
+  }
+
+
 }

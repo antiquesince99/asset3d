@@ -12,6 +12,7 @@ import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PaymentComponent } from './payment/payment.component';
+import { SellerDashComponent } from './seller-dash/seller-dash.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'AdminDashboard', component: AdminDashComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'header', component: HeaderComponent},
-  { path: 'payment', component: PaymentComponent}
+  { path: 'payment', component: PaymentComponent},
+  { path: 'SellerDashboard', component: SellerDashComponent}
 ];
 
 @NgModule({

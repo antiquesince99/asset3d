@@ -38,12 +38,12 @@ export class SellerregisterComponent implements OnInit {
   sellerSubmit(formdata){
 
     if(this.sellerform.invalid){
-      // alert('incorrect data')
+       alert('incorrect data')
 
       return;
     }
 
-    this.sellerservice.addseller(FormData).subscribe(data => {
+    this.sellerservice.addseller(formdata).subscribe(data => {
       console.log(data);
     })
   }

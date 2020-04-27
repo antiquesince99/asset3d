@@ -29,6 +29,8 @@ import { ManageuserComponent } from './manageuser/manageuser.component';
 import { ManagesellerComponent } from './manageseller/manageseller.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { PaymentComponent } from './payment/payment.component';
+import { SellerDashComponent } from './seller-dash/seller-dash.component';
+import { ManagemodelComponent } from './managemodel/managemodel.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { PaymentComponent } from './payment/payment.component';
     HeaderComponent,
     ManageuserComponent,
     ManagesellerComponent,
-    PaymentComponent
+    PaymentComponent,
+    SellerDashComponent,
+    ManagemodelComponent
   ],
   imports: [
     BrowserModule,
