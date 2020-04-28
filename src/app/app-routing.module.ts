@@ -13,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { PaymentComponent } from './payment/payment.component';
 import { SellerDashComponent } from './seller-dash/seller-dash.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
 
 
 
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'footer', component: FooterComponent},
   { path: 'header', component: HeaderComponent},
   { path: 'payment', component: PaymentComponent},
-  { path: 'SellerDashboard', component: SellerDashComponent}
+  { path: 'SellerDashboard', component: SellerDashComponent},
+  { path: 'ProductDetails', component: ProductdetailsComponent}
 ];
 
 @NgModule({

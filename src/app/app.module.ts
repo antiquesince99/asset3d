@@ -31,6 +31,12 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { PaymentComponent } from './payment/payment.component';
 import { SellerDashComponent } from './seller-dash/seller-dash.component';
 import { ManagemodelComponent } from './managemodel/managemodel.component';
+import { CartComponent } from './cart/cart.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -50,7 +56,9 @@ import { ManagemodelComponent } from './managemodel/managemodel.component';
     ManagesellerComponent,
     PaymentComponent,
     SellerDashComponent,
-    ManagemodelComponent
+    ManagemodelComponent,
+    CartComponent,
+    ProductdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +73,11 @@ import { ManagemodelComponent } from './managemodel/managemodel.component';
     HttpClientModule,
     SweetAlert2Module,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    NgbModule,
+    NgxStarRatingModule,
+    NgbPaginationModule,
+     NgbAlertModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
