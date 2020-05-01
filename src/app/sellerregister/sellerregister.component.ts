@@ -31,7 +31,8 @@ export class SellerregisterComponent implements OnInit {
       email : ['', Validators.required],
       contact : ['', Validators.required],
       password : ['', Validators.required],
-      confirm : ['', Validators.required]
+      confirm : ['', Validators.required],
+      created : new Date
     })
  
   }

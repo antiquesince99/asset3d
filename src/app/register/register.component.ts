@@ -31,6 +31,7 @@ export class RegisterComponent implements OnInit {
       email : ['', Validators.required],
       password : ['', Validators.required],
       confirm : ['', Validators.required],
+      created : new Date
     }, {validators : this.matchPassword('password', 'confirm')})
   }
 

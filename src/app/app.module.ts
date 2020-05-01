@@ -35,7 +35,9 @@ import { CartComponent } from './cart/cart.component';
 import { ProductdetailsComponent } from './productdetails/productdetails.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxStarRatingModule } from 'ngx-star-rating';
-import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { RenderComponent } from './render/render.component';
+import { SellerLoginComponent } from './seller-login/seller-login.component';
+
 
 
 
@@ -58,7 +60,9 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
     SellerDashComponent,
     ManagemodelComponent,
     CartComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    RenderComponent,
+    SellerLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -75,9 +79,8 @@ import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
     MatIconModule,
     MatExpansionModule,
     NgbModule,
-    NgxStarRatingModule,
-    NgbPaginationModule,
-     NgbAlertModule,
+    NgxStarRatingModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
