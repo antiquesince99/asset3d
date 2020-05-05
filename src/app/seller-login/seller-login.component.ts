@@ -33,7 +33,7 @@ export class SellerLoginComponent implements OnInit {
           sessionStorage.setItem('user',JSON.stringify(logged_user));
           sessionStorage.setItem('admin',JSON.stringify(true));
           
-            this.router.navigate(['/sellerDashboard'])
+            this.router.navigate(['/SellerDashboard'])
             return;
         }else{
           Swal.fire({

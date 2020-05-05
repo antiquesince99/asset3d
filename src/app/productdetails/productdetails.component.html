@@ -1,7 +1,9 @@
 <div class="container" *ngIf="product">
     <div class="row">
         <div class="col-md-4">
-            <img [src]="'http://localhost:3000/'+product.image" class="img-fluid">
+            <img [src]="" class="img-fluid">
+            <div style="height: 270px;background-repeat: no-repeat;background-size: cover;background-position: center;"
+            [style.background-image]="'http://localhost:3000/products/'+product.image"></div>
         </div>
         <div class="col-md-8">
             <mat-card>
