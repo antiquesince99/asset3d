@@ -38,4 +38,10 @@ export class ProductService {
     return this.http.get(`http://localhost:3000/review/getbyuser/${user_id}`);
   }
 
+
+  uploadImage(file)
+  {
+  return this.http.post(this.url+'/addimg',file)
+  }
+
 }

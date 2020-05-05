@@ -33,6 +33,20 @@
                   <li class="nav-item active text-center">
                     <a class="nav-link" [routerLink]="['/browse']" routerLinkActive="router-link-active" >Browse</a>
                   </li>
+
+                  <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">DashBoard</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" [routerLink]="['/AdminDashboard']" routerLinkActive="router-link-active">Admin Dashboard</a>
+                      <a  class="dropdown-item"  [routerLink]="['/SellerDashboard']" routerLinkActive="router-link-active">Seller Dashoard</a>
+                      <div class="dropdown-divider"></div> 
+                    </div>
+                  </li>
+
+
+
+
+
             </ul>
         </div>
     </div>
