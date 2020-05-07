@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     //   add user details tosession storage
     sessionStorage.setItem('user', JSON.stringify(logged_user));
     sessionStorage.setItem('admin', JSON.stringify(true));
-      if(logged_user.admin){
+      if(logged_user['admin']){
         // navigate to admin dashboaard
 
         this.router.navigate(['/admin'])
@@ -61,9 +61,8 @@ export class LoginComponent implements OnInit {
     })
   }
 });
+
   }
-  
-  
 
   getControl(){
     return this.loginform.controls;

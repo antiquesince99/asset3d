@@ -44,4 +44,9 @@ export class ProductService {
   return this.http.post(this.url+'/addimg',file)
   }
 
+  uploadFile(file)
+  {
+  return this.http.post(this.url+'/addfile',file)
+  }
+
 }

@@ -36,6 +36,7 @@ export class SellerLoginComponent implements OnInit {
             this.router.navigate(['/SellerDashboard'])
             return;
         }else{
+          console.log('password incorrect');
           Swal.fire({
             icon :'error',
             title : 'oops!',
@@ -43,6 +44,7 @@ export class SellerLoginComponent implements OnInit {
           })
         }
       }else{
+        console.log('user not found');
        Swal.fire({
          icon :'error',
          title : 'oops!',

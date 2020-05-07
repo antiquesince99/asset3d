@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { sellerService } from '../seller.service';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sellerregister',
@@ -19,7 +20,7 @@ export class SellerregisterComponent implements OnInit {
   avatarName:any;
  
  
-  constructor(private fb: FormBuilder, private sellerservice : sellerService) { }
+  constructor(private fb: FormBuilder, private sellerservice : sellerService, private router: Router) { }
 
   ngOnInit(): void {
     this.initform();
@@ -46,6 +47,7 @@ export class SellerregisterComponent implements OnInit {
 
     this.sellerservice.addseller(formdata).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/SellerLogin']);
     })
   }
 

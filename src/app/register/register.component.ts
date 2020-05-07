@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from '../user.service';
 import Swal from 'sweetalert2';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,7 @@ export class RegisterComponent implements OnInit {
   
 
 
-  constructor(private fb: FormBuilder, private userservice: UserService) { }
+  constructor(private fb: FormBuilder, private userservice: UserService, private router: Router) { }
 
   ngOnInit(): void {
     this.initForm();
@@ -67,7 +68,7 @@ export class RegisterComponent implements OnInit {
     formData.append('image', this.selectedFile, this.selectedFile.name);
     this.userservice.uploadImage(formData).subscribe(response=>
       {
-      console.log(response.message)
+      console.log(response['message'])
       })
   }
   avatarName(avatarName: any) {
@@ -101,6 +102,7 @@ export class RegisterComponent implements OnInit {
     formdata.avtar= this.avatarName
     this.userservice.addUser(formdata).subscribe(data => {
       console.log(data);
+      this.router.navigate(['/login']);
     })
   }
 

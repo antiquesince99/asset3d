@@ -20,7 +20,7 @@ import { SellerLoginComponent } from './seller-login/seller-login.component';
 
 
 const routes: Routes = [
-  { path: 'register', component: RegisterComponent},
+  { path: 'signup', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
   { path: 'addmodel', component: AddmodelComponent},
   { path: 'browse', component: BrowseComponent},

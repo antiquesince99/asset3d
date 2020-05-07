@@ -1,11 +1,11 @@
-<div class="container" *ngIf="product">
-    <div class="row">
+<div class="container-fluid" *ngIf="product">
+    <div class="row justify-content-center">
         <div class="col-md-4">
             <img [src]="" class="img-fluid">
-            <div style="height: 270px;background-repeat: no-repeat;background-size: cover;background-position: center;"
-            [style.background-image]="'http://localhost:3000/products/'+product.image"></div>
+            <div style="height: 100%;background-repeat: no-repeat;background-size: cover;background-position: center;"
+            [style.background-image]="'url(http://localhost:3000/products/images/'+product.image+')'"></div>
         </div>
-        <div class="col-md-8">
+        <div class="col-md-7">
             <mat-card>
                 <mat-card-content class="card-body">
                     <div class="row">
@@ -17,32 +17,30 @@
                         </div>
                     </div>
                     <hr>
-                    <p class="h4">{{product.category}}</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p>Compatibilty</p>
+                            <p>Image Formats</p>
+                            <p>Size</p>
+                            <p>Geometry</p>
+                            <p>Vertices</p>
+                            <p>Textures</p>
+                        </div>
+                        <div class="col-6">
+                            <p>{{product.compatibilty}}</p>
+                            <p>{{product.image_formats}}</p>
+                            <p>{{product.size}}</p>
+                            <p>{{product.geometry}}</p>
+                            <p>{{product.vertices}}</p>
+                            <p>{{product.textures}}</p>
+                        </div>
+                    </div>
+
                 </mat-card-content>
             </mat-card>
         </div>
     </div>
 </div>
-
-
-<div class="container mt-5" *ngIf="product">
-    <div class="card">
-        <div class="card-body">
-            <div class="row">
-                <div class="row item">
-                    <div class="col-md-3">{{product.name}}</div>
-                    <div class="col-md-3">{{product.price}}</div>
-                    <div class="col-md-3">{{product.category}}</div>
-                    <div class="col-md-3"><img src="http://localhost:3000/products/{{product.image}}" class="img-fluid card-img-top" width="100px"></div>
-                </div>
-                <hr>
-            </div>
-        </div>
-    </div>
-
-
-
-
 
     <div class="card mt-3" *ngIf="currentUser">
         <div class="card-body">
@@ -74,4 +72,3 @@
             </form>
         </div>
     </div>
-</div>
