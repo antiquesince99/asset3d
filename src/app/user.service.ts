@@ -8,7 +8,13 @@ import { Router } from '@angular/router';
 export class UserService {
 
   url = 'http://localhost:3000/user';
-  constructor(private http: HttpClient, private router : Router) { }
+  loggedin = false;
+
+  constructor(private http: HttpClient, private router : Router) { 
+    if(sessionStorage.getItem('user')){
+      this.loggedin = true;
+    }
+  }
 
   addUser(data){
     return this.http.post(this.url+'/add', data);

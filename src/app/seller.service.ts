@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 export class sellerService {
 
   url = 'http://localhost:3000/seller';
+  seller = false;
 
   constructor(private http: HttpClient) { }
 
