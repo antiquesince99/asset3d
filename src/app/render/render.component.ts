@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-render',
@@ -11,10 +11,11 @@ export class RenderComponent implements OnInit {
   aspect = 2;
   near = 0.1;
   far = 100;
-
+  @Input('modeldata') modeldata;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.modeldata)
     this.main();
   }
     
@@ -97,7 +98,7 @@ export class RenderComponent implements OnInit {
         }
 
         {
-          const modelName = 'assets/bingdu02/scene.gltf';
+          const modelName = 'http://localhost:3000/products/extracted/'+this.modeldata.file+'/scene.gltf';
           console.log('model ==> '+modelName);
           const gltfLoader = new THREE.GLTFLoader();
           gltfLoader.load(modelName, (gltf) => {
