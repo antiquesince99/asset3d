@@ -1,11 +1,10 @@
 <div class="container-fluid" *ngIf="product">
     <div class="row justify-content-center">
-        <div class="col-md-4">
-            <img [src]="" class="img-fluid">
+        <div class="col-md-4 mt-5">
             <div style="height: 100%;background-repeat: no-repeat;background-size: cover;background-position: center;"
             [style.background-image]="'url(http://localhost:3000/products/images/'+product.image+')'"></div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-7 mt-5">
             <mat-card>
                 <mat-card-content class="card-body">
                     <div class="row">
@@ -40,78 +39,42 @@
             </mat-card>
         </div>
     </div>
+
+    <app-render [modeldata] = "product" *ngIf="product"></app-render>
 </div>
 
-    <div class="card mt-3" *ngIf="currentUser">
-        <div class="card-body">
-            <div *ngFor = "let review of reviews">
-                <div *ngIf="review && review.user._id != currentUser._id">
-                    <p class="h3">{{review.user.name}}</p>
-                    <p class="h3">Stars : {{review.rating}}</p>
-                    <ngb-rating [rate]="review.rating" [readonly]="true" max = '5' style="color: rgb(0, 89, 255);"></ngb-rating>
-                    <p class="h3">{{review.review}}</p>
-                    <hr>
+    <div class="container">
+        <div class="card mt-3" *ngIf="currentUser">
+            <div class="card-body">
+                <div *ngFor = "let review of reviews">
+                    <div *ngIf="review && review.user._id != currentUser._id">
+                        <p class="h3">{{review.user.name}}</p>
+                        <p class="h3">Stars : {{review.rating}}</p>
+                        <ngb-rating [rate]="review.rating" [readonly]="true" max = '5' style="color: rgb(0, 89, 255);"></ngb-rating>
+                        <p class="h3">{{review.review}}</p>
+                        <hr>
+                    </div>
+                    
                 </div>
-                
+            </div>
+        </div>
+    
+        <div class="card mt-3" *ngIf="currentUser">
+            <div class="card-body">
+                <p class="h2">{{currentUser.name}}, Add Review</p>
+                <form [formGroup]="reviewForm" (submit)="addReview(reviewForm.value)" *ngIf="reviewForm">
+    
+                    <label class="h3">Rating</label>
+                    <!-- <input class="form-control" type="number" min="1" max="5" formControlName="rating"> -->
+                    <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+                    <label class="h3">Review</label>
+                    <textarea class="form-control" formControlName="review"></textarea>
+    
+                    <button mat-raised-button color="warning">Add Review</button>
+                </form>
             </div>
         </div>
     </div>
 
-    <div class="card mt-3" *ngIf="currentUser">
-        <div class="card-body">
-            <p class="h2">{{currentUser.name}}, Add Review</p>
-            <form [formGroup]="reviewForm" (submit)="addReview(reviewForm.value)" *ngIf="reviewForm">
 
-                <label class="h3">Rating</label>
-                <!-- <input class="form-control" type="number" min="1" max="5" formControlName="rating"> -->
-                <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
-                <label class="h3">Review</label>
-                <textarea class="form-control" formControlName="review"></textarea>
-
-                <button mat-raised-button color="warning">Add Review</button>
-            </form>
-        </div>
-    </div>
-<<<<<<< HEAD
-
-
-
-
-    <div class="container-fluid mt-5">
-        <div class="input-group">
-        <input #category >
-        <button class="input-group-append" (click)="searchbyCategory(category.value)">Search</button>
-        </div>
-        <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-9">
-        <div class="search-area"></div>
-        
-       </div>
-        
-       </div>
-       
-       
-       
-       
-       
-        
-       <div class="row">
-        <div class="col-md-3" *ngFor="let prod of all_products" [routerLink]="['/details', prod._id]" routerLinkActive="router-link-active">
-        <div class="card">
-        <img class="card__img" style="border-bottom: black 1px;" src="http://localhost:3000/{{prod.images[0]}}">
-        
-       <div class="card__content">
-        <p class="card__header text-center">{{prod.prodname}}</p>
-        <p class="card__text text-center"> ₹. {{prod.prodprice}} </p>
-        <p class="card__text text-center"> {{prod.prodcat}} </p>
-        <button class="card__btn text-center">Explore ></button>
-        </div>
-       </div>
-       </div>
-        
-       </div>
-       
-=======
-    <app-render [modeldata]="product"></app-render>
->>>>>>> 227ff89d68ca1a06ebcb0341e1270ccf22c8edc8
+    
