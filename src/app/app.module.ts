@@ -37,6 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxStarRatingModule } from 'ngx-star-rating';
 import { RenderComponent } from './render/render.component';
 import { SellerLoginComponent } from './seller-login/seller-login.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
 
 
 
@@ -62,7 +63,8 @@ import { SellerLoginComponent } from './seller-login/seller-login.component';
     CartComponent,
     ProductdetailsComponent,
     RenderComponent,
-    SellerLoginComponent
+    SellerLoginComponent,
+    ForgetPasswordComponent
   ],
   imports: [
     BrowserModule,

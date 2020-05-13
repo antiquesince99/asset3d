@@ -38,6 +38,12 @@ export class UserService {
   }
 
 
+  getUserByEmail(email){
+    return this.http.get(this.url+'/getbyemail/'+email);
+  }
+  changePassword(id,password){
+    return this.http.put(this.url+`/user/changepassword/${id}`, {password : password})
+  }
 uploadImage(file)
 {
 return this.http.post(this.url+'/addimg',file)

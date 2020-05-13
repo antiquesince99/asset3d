@@ -1,5 +1,5 @@
 <div class="container" style="margin-top: 10rem;">
-    <div class="card " style="border: 0px;">
+    <div class="card" style="border: 0px;">
         <div class="row justify-content-center">
             <div class="col-md-7 reg-top" [style.background-image]="'url(/assets/neonbrand.jpg)'">
                 <!-- <img src="/static/reg-top.jpg" style="height: 25rem;"> -->
@@ -9,64 +9,65 @@
                 
                     <p class="h2 text-center">SIGN UP</p>
                     <hr>
-                   
-            <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
-
-                <mat-form-field appearance="outline" class="col-md">
-                    <mat-label>Name</mat-label>
-                    <input matInput placeholder="Mr. Anderson"  formControlName="name">
-                    <mat-icon matSuffix>account_circle</mat-icon>
-
-                    <mat-error *ngIf="getControl().password.errors">Password required</mat-error>
-                </mat-form-field>
-
-
-                <mat-form-field appearance="outline" class="col-md">
-                    <mat-label>username</mat-label>
-                    <input matInput placeholder="Mr. Anderson"  formControlName="username">
-                    <mat-icon matSuffix>account_box</mat-icon>
-                    <mat-error *ngIf="getControl().username.errors">Password required</mat-error>
-                </mat-form-field>
+         
+                <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
 
                     <mat-form-field appearance="outline" class="col-md">
-                        <mat-label>Email</mat-label>
-                        <input matInput placeholder="Mr. Anderson"  formControlName="email">
-                        <mat-icon matSuffix>email</mat-icon>
-
-                        <mat-error *ngIf="getControl().email.errors">Password required</mat-error>
+                        <mat-label>Name</mat-label>
+                        <input matInput placeholder="Mr. Anderson"  formControlName="name">
+                        
+                        <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
                     </mat-form-field>
-
+    
+    
                     <mat-form-field appearance="outline" class="col-md">
-                        <mat-label>contact</mat-label>
-                        <input matInput placeholder="Mr. Anderson"  formControlName="contact">
-                        <mat-icon matSuffix>settings_phone</mat-icon>
-
-                        <mat-error *ngIf="getControl().contact.errors">Password required</mat-error>
+                        <mat-label>username</mat-label>
+                        <input matInput placeholder="Mr. Anderson"  formControlName="username">
+                        
+                        <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
                     </mat-form-field>
-
-
+    
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="Mr. Anderson"  formControlName="email">
+                           
+    
+                            <mat-error *ngIf="getControl().email.errors">Email required</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>contact</mat-label>
+                            <input matInput placeholder="Mr. Anderson"  formControlName="contact">
+                           
+    
+                            <mat-error *ngIf="getControl().contact.errors">Contact required</mat-error>
+                        </mat-form-field>
+    
+    
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>password</mat-label>
+                            <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
+                           
+    
+    
+                        <mat-error *ngIf="getControl().password.errors">Password required</mat-error>
+                    </mat-form-field>
+                            
+    
                     <mat-form-field appearance="outline" class="col-md">
-                        <mat-label>password</mat-label>
-                        <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
-                        <mat-icon matSuffix>https</mat-icon>
-
-
-                    <mat-error *ngIf="getControl().password.errors">Password required</mat-error>
+                        <mat-label>confirm password</mat-label>
+                        <input matInput placeholder="Mr. Anderson" type="password"   formControlName="confirm">
+                       
+    
+    
+                    <mat-error *ngIf="getControl().confirm.errors">Password required</mat-error>
                 </mat-form-field>
                         
-
-                <mat-form-field appearance="outline" class="col-md">
-                    <mat-label>confirm password</mat-label>
-                    <input matInput placeholder="Mr. Anderson" type="password"   formControlName="confirm">
-                    <mat-icon matSuffix>verified_user</mat-icon>
-
-
-                <mat-error *ngIf="getControl().confirm.errors">Password required</mat-error>
-            </mat-form-field>
-                    
-
-                        <button class="btn btn-danger btn-block mt-5" >Sign Up</button>
-                    </form>
+    
+                            <button class="btn btn-danger btn-block mt-5" >Sign Up</button>
+                        </form>
+                
+            
                     <hr>
                     <a href="/SellerLogin">Already registered?</a>
                 </div>
